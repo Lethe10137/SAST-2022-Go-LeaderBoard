@@ -7,21 +7,23 @@ import (
 )
 
 type Config struct {
-	DbUserName string `json:"db_user_name"`
-	DbPassword string `json:"db_password"`
-	DbName     string `json:"db_name"`
-	DbIP       string `json:"db_ip"`
+	DbUserName string `json:"dbUserName"`
+	DbPassword string `json:"dbPassword"`
+	DbName     string `json:"dbName"`
+	DbIP       string `json:"dbIp"`
 }
 
 func Parse() Config {
-	JsonConfig, err := os.Open("./config.json")
+	// JsonConfig, err := os.Open("config/config.json")
+	JsonConfig, err := os.Open("config.json")
 	config := Config{}
 	//if config failed, by default use test mod
 	if err != nil {
+
 		config = Config{
 			DbUserName: "root",
-			DbPassword: "root",
-			DbName:     "testdb",
+			DbPassword: "12345678",
+			DbName:     "goleader",
 			DbIP:       "127.0.0.1:3306",
 		}
 	} else {

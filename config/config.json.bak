@@ -1,0 +1,7 @@
+{
+    "DbUserName": "root",
+    "DbPassword": "12345678",
+    "DbName":     "goleader",
+    "DbIP":       "127.0.0.1:3306"
+}
+
